@@ -1,0 +1,103 @@
+.headContainer
+{
+  width: 100vw;
+  height: 100vw;
+}
+*:link
+{
+  text-decoration: none;
+}
+
+.headWrapper
+{
+  display: flex;
+  padding: 20px; 
+}
+.hlogo
+{
+  width: 15vw;
+  height: auto;
+}
+.fixing
+{
+  display: flex;
+  gap: .9rem;
+  padding-left: 1rem;
+  flex-direction: column;
+}
+
+.extraWrapper{
+  width: 50vw;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  border-radius: 2.25rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: relative;
+}
+
+.hinpute
+{
+  height: 37px;
+  border: none;
+  outline: none;
+  padding: 15px 10px;
+  font-size: 18px;
+  padding: 2px 10px;
+  background: #fff;
+  color: #000;
+}
+
+.headerSearch
+{
+  width: 2vw;
+  height: 2vw;
+  position: absolute;
+  right: .9rem;
+  cursor: pointer;
+}
+
+.cateContainer
+{
+  margin-top: 6px;
+  display: flex;
+  gap: .5rem;
+}
+@media screen and (max-width: 767px) {
+.fixing
+{
+  padding-left: 0;
+}
+  .hlogo
+{
+  width: 56vw;
+}
+  .headerSearch 
+  {
+    width: 4vw;
+    height: 4vw;
+  }
+  .headWrapper
+  {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hinpute
+  {
+    width: 90vw;
+  
+  }
+  .extraWrapper
+  {
+    width: 90vw;
+  }
+  .cateContainer
+{
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+}

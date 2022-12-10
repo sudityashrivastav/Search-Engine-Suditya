@@ -1,0 +1,136 @@
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.resultCard
+{
+  width: 50vw;
+  display: block;
+  margin: 8px auto;
+  padding: 14px;
+  border-radius: .5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.url, .title, .disc{
+  font-size: 15px;
+  padding: 2px 0;
+}
+.title{
+  font-weight: bold;
+  color: #4650d2;
+margin-bottom: 2px;
+}
+.url{
+  width: 100%;
+  font-weight: 400;
+}
+.title:hover, .sitelinks a:hover, .relatedQuery:hover{
+  text-decoration: underline;
+}
+.url,. domain{
+  padding: 7px 3px;
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+.sitelinks{
+  padding-top: 8.5px;
+}
+.sitelinks a
+{ font-size: 15px;
+  display: block;
+  padding: 12px 0;
+  font-weight: bold;
+  color: #4650d2;
+}
+
+hr {
+  height: .8px;
+  opacity: .5;
+  background: #171616;
+}
+
+.relatedSearches{
+  padding: 16px;
+  border-radius: .5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+h4{
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.queryContainer{
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:5px;
+}
+.relatedQuery{
+  font-size: 16px;
+  background: #f1f3f4;
+  padding: 13px 20px;
+  border-radius: 2.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .5s;
+}
+
+h6{
+  margin-left: 10px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+.quesAns{
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border-radius: 0;
+}
+.quesAns:hover{
+  text-decoration: none;
+}
+.question{
+  font-size: 17px;
+  font-weight: 500;
+}
+.answer{
+  font-weight: 16px;
+  display: none;
+}
+.question,.answer {
+   padding: 2px 0;
+}
+.anshow{
+  display: block;
+  
+}
+
+@media screen and (max-width: 400px) {
+
+.queryContainer{
+  grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .resultCard{
+   width: 100%; 
+  }
+  .url, .title, .disc{
+  font-size: 15px; 
+}
+  .sitelinks a{
+    font-size: 15px;
+  }
+  
+.relatedQuery{
+  font-size: 12px;}
+}
+
+ 
