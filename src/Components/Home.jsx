@@ -8,36 +8,18 @@ import axios from "axios";
 
 
 export default function Home() {
+  const [loading, setLoading] = useState(false);
+  
   const handleKeyDown = (e) => {
     if (e.code === "Enter") {  
-      console.log("Enter key has been pressed!");
-      document.getElementById("search").click();
+    document.getElementById("search").click();
     }
   }
 
-  const fetchData = async ()=>{
-    
-const url = "https://api.scaleserp.com/search?api_key=03C15BCA6BD9467784AAC410C4C348FF&q=scam&hl=en";
-
-    const axios = require('axios').default;
-    axios.get(url)
-  .then(function (response) {
-    // handle success
-    alert(response);
-  })
-
-
-    /*
-    const res = await fetch(url);
-    const data = await res.json();
-   await alert(data)
-*/
-    
+  const fetchData = ()=> {
+  
   }
 
-    
-  const [loading, setLoading] = useState(false);
-  
   useEffect(() => {
     //setLoading(true)
     //console.log(data);

@@ -1,5 +1,4 @@
 import "../Style/Results.css";
-//import { data } from "/src/Data/fetchData3.js"
 import { useState } from "react";
 
 
@@ -9,7 +8,7 @@ import { useState } from "react";
 
 
 const Results = (data) => {
-  
+  console.log(data)
   const [isActive, setIsActive] = useState(false);
   // console.log(data)
   const ques = () => {
