@@ -1,7 +1,8 @@
 .headContainer
 {
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
+  background: hsl(223, 10%, 10%);
 }
 *:link
 {
@@ -12,6 +13,7 @@
 {
   display: flex;
   padding: 20px; 
+  background: hsl(223, 10%, 10%);
 }
 .hlogo
 {
@@ -24,16 +26,16 @@
   gap: .9rem;
   padding-left: 1rem;
   flex-direction: column;
+  background: hsl(223, 10%, 10%);
 }
 
 .extraWrapper{
   width: 50vw;
-  border: 1px solid black;
   display: flex;
   align-items: center;
   border-radius: 2.25rem;
   overflow: hidden;
-  background: #fff;
+  background: hsl(223, 10%, 10%);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   position: relative;
 }
@@ -46,8 +48,8 @@
   padding: 15px 10px;
   font-size: 18px;
   padding: 2px 10px;
-  background: #fff;
-  color: #000;
+  background: hsl(223, 10%, 10%);
+  color: #fff;
 }
 
 .headerSearch

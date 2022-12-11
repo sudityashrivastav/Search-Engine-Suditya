@@ -1,28 +1,25 @@
 import "../Style/Results.css";
 import { useState } from "react";
+import {useContext} from "react";
+import NoteContext from "/src/Context/NoteContext.jsx";
+import Loading from "./Loading.jsx"
 
-
-
-
-
-
-
-const Results = (data) => {
-  console.log(data)
+const Results = () => {
+const {data, loading} = useContext(NoteContext);
   const [isActive, setIsActive] = useState(false);
-  // console.log(data)
+  console.log(data)
+  
   const ques = () => {
     setIsActive(!isActive);
     console.log(isActive)
-
   }
 
-  return (
-    <div className="resultContainer">
+  return (<> {loading ? (<Loading/>) : 
+    (<div className="resultContainer">
+      
       {data.search_information &&
-      <h6>About {data.search_information.total_results
-      } results ({data.search_information.time_taken_displayed
-        } seconds)</h6>
+        <h6>About {data.search_information.total_results} results ({data.search_information.time_taken_displayed
+          } seconds)</h6>
       }
 
 
@@ -50,7 +47,7 @@ const Results = (data) => {
 
 
 
-      { data.organic_results &&
+      {data.organic_results &&
         data.organic_results.map((elem, key) => (
           <div key={key} className="resultCard">
             <a href={elem.link} target="_blank">
@@ -58,10 +55,10 @@ const Results = (data) => {
               <div className="title">{elem.title}</div>
             </a>
             <div className="disc">{elem.snippet}</div>
-            <div className="sitelinks">{elem.sitelinks && elem.sitelinks.inline.map((siteElem, keyTwo) => (<>
-              <hr key={keyTwo} />
-              <a key={keyTwo} href={siteElem.link}>{siteElem.title}</a>
-            </>
+            <div className="sitelinks">{elem.sitelinks && elem.sitelinks.inline.map((siteElem, keyTwo) => (<div key={keyTwo}>
+              <hr/>
+              <a href={siteElem.link}>{siteElem.title}</a>
+            </div>
             ))}
             </div>
           </div>
@@ -78,7 +75,7 @@ const Results = (data) => {
           </div>
         </div>
       }
-    </div>
-  )
+    </div>)}
+  </>)
 }
 export default Results;
