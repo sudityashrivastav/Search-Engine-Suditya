@@ -1,28 +1,33 @@
 import "../Style/Results.css";
 import { useState } from "react";
-import {useContext} from "react";
-import NoteContext from "/src/Context/NoteContext.jsx";
-import Loading from "./Loading.jsx"
+import Loading from "./Loading.jsx";
 
-const Results = () => {
-const {data, loading} = useContext(NoteContext);
-  const [isActive, setIsActive] = useState(false);
-  console.log(data)
-  
-  const ques = () => {
-    setIsActive(!isActive);
-    console.log(isActive)
-  }
+const Results = (mainData) => {
+let {loading} = mainData.data.mainData;
+let {data} = mainData.data.mainData;
+console.log(loading);
+  console.log(data);
+//console.log(mainData.data.mainData);
 
+
+//const data = "";
   return (<> {loading ? (<Loading/>) : 
-    (<div className="resultContainer">
-      
+    (<div className="resultContainer">    
       {data.search_information &&
         <h6>About {data.search_information.total_results} results ({data.search_information.time_taken_displayed
           } seconds)</h6>
       }
+      {
+        data.answer_box &&
+        <div className="resultCard">
+          <h4>Ok</h4>   
+     <p className="disc">Exclamation: {data.answer_box.answers[0].source.date}</p>
+          <h4>Source</h4>
 
 
+        </div>
+        
+      }
 
       {/* Question answer session
         data.related_questions &&
@@ -48,7 +53,7 @@ const {data, loading} = useContext(NoteContext);
 
 
       {data.organic_results &&
-        data.organic_results.map((elem, key) => (
+    data.organic_results.map((elem, key) => (
           <div key={key} className="resultCard">
             <a href={elem.link} target="_blank">
               <div className="url">{elem.displayed_link.slice(0, 42)}</div>

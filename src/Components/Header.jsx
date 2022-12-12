@@ -2,16 +2,12 @@ import "../Style/Header.css";
 import Categories from "./Categories";
 import Results from "./Results";
 import axios from 'axios';
-import { data } from "/src/Data/fetchData.js"
-
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+export default function Header(data) {
 
-export default function Header() {
-
-  const [searchData, setSearchtData] = useState(data);
-  const [inputData, setInputData] = useState("hello");
+  const [inputData, setInputData] = useState("");
 
   const updateValue = e => {
     setInputData(e.target.value);
@@ -28,7 +24,7 @@ export default function Header() {
             <img className="headerSearch" src="src/Images/search.png" />
           </div>
           <Categories />
-          <Results xdata={searchData} />
+          <Results data={data} />
         </div>
       </div>
     </div>

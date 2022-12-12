@@ -119,8 +119,9 @@ h6{
 }
 .anshow{
   display: block;
-  
 }
+h4{
+  color: #fff;}
 
 @media screen and (max-width: 400px) {
 
