@@ -3,57 +3,41 @@ import { useState } from "react";
 import Loading from "./Loading.jsx";
 
 const Results = (mainData) => {
-let {loading} = mainData.data.mainData;
-let {data} = mainData.data.mainData;
-console.log(loading);
-  console.log(data);
-//console.log(mainData.data.mainData);
-
-
-//const data = "";
-  return (<> {loading ? (<Loading/>) : 
-    (<div className="resultContainer">    
+  console.log(mainData)
+  let { loading } = mainData.data.loading;
+  let { data } = mainData.data;
+//console.log(data)
+  return (<> {loading ? (<Loading />) :
+    (<div className="resultContainer">
       {data.search_information &&
         <h6>About {data.search_information.total_results} results ({data.search_information.time_taken_displayed
-          } seconds)</h6>
-      }
-      {
-        data.answer_box &&
-        <div className="resultCard">
-          <h4>Ok</h4>   
-     <p className="disc">Exclamation: {data.answer_box.answers[0].source.date}</p>
-          <h4>Source</h4>
-
-
-        </div>
-        
+        } seconds)</h6>
       }
 
-      {/* Question answer session
-        data.related_questions &&
+
+      {data.related_questions &&
         <div className="relatedSearches" style={{ marginTop: "5px" }}>
           <h4>People also ask</h4>
           <div className="questionContainer">
             {data.related_questions.map((elemQuery, key) => {
-          console.log(key)
-              return (<div key={key} className="relatedQuery quesAns" onClick={ques} >
-
-                <div className="question">{elemQuery.question}</div>
-                <div className={`answer ${isActive ? "anshow" : ""}`}>{elemQuery.answer}</div>
-
-              </div>
+              
+              return (
+                <div key={key} className="relatedQuery quesAns">
+                  <div className="question">{elemQuery.question}</div>
+                  <div>{elemQuery.answer}</div>
+                </div>
               )
             })}
           </div>
-        </div> */
-      }
+        </div>}
+
 
 
 
 
 
       {data.organic_results &&
-    data.organic_results.map((elem, key) => (
+        data.organic_results.map((elem, key) => (
           <div key={key} className="resultCard">
             <a href={elem.link} target="_blank">
               <div className="url">{elem.displayed_link.slice(0, 42)}</div>
@@ -61,7 +45,7 @@ console.log(loading);
             </a>
             <div className="disc">{elem.snippet}</div>
             <div className="sitelinks">{elem.sitelinks && elem.sitelinks.inline.map((siteElem, keyTwo) => (<div key={keyTwo}>
-              <hr/>
+              <hr />
               <a href={siteElem.link}>{siteElem.title}</a>
             </div>
             ))}

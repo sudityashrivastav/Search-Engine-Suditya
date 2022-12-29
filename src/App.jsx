@@ -13,7 +13,7 @@ const [data, setData] = useState({"name": "Suditya","age": 18});
     <BrowserRouter >
       <Routes >
         <Route path="/" element={<Home onData={setData}/>}></Route>
-        <Route path="/result" element={<Header mainData={data} />} ></Route>
+        <Route path="/result" element={<Header mainData={data} updateData={setData}/>} ></Route>
       </Routes>
     </BrowserRouter>
     

@@ -2,7 +2,7 @@
   margin: 0; padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  color: #000;
+  color: #f2f2f2;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -19,7 +19,7 @@
   border-radius: .5rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background: hsl(223, 10%, 10%);
-  color: #fff;
+  color: #f2f2f2;
 }
 
 .url, .title, .disc{
@@ -36,7 +36,7 @@ margin-bottom: 2px;
   font-weight: 400;
 }
 .disc,.url{
-  color: #fff;
+  color: #f2f2f2;
 }
 .title:hover, .sitelinks a:hover, .relatedQuery:hover{
   text-decoration: underline;
@@ -79,7 +79,7 @@ h4{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap:5px;
-  color: #fff;
+  color: #f2f2f2;
 }
 .relatedQuery{
   font-size: 16px;
@@ -88,7 +88,7 @@ h4{
   font-weight: bold;
   cursor: pointer;
   transition: .5s;
-  color: #fff;
+  color: #f2f2f2;
 }
 
 h6{
@@ -96,7 +96,7 @@ h6{
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
-  color: #fff;
+  color: #f2f2f2;
 }
 .quesAns{
   margin-top: 6px;
@@ -107,7 +107,7 @@ h6{
   text-decoration: none;
 }
 .question{
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
 }
 .answer{
@@ -121,7 +121,16 @@ h6{
   display: block;
 }
 h4{
-  color: #fff;}
+  color: #f2f2f2;
+}
+
+.type{
+  display: flex;
+}
+p{
+  margin: 5px;
+  color: #f2f2f2;
+}
 
 @media screen and (max-width: 400px) {
 
