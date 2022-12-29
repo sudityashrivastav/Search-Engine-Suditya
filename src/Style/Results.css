@@ -41,7 +41,7 @@ margin-bottom: 2px;
 .title:hover, .sitelinks a:hover, .relatedQuery:hover{
   text-decoration: underline;
 }
-.url,. domain{
+.url,.domain{
   padding: 7px 3px;
   margin: 2px 0;
   font-size: 14px;

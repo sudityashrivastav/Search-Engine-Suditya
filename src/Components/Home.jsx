@@ -26,12 +26,12 @@ data = await res.json();
 
     return (<>
       <div className="homeContainer">
-        <img className="logo" src="src/Images/logo.png" />
+        <img className="logo" src="https://i.ibb.co/YcS4v07/logo-1.png"/>
         <div className="wrapper">
-          <img alt="this is an image" className="homeSearch white" src="src/Images/voice.png" />
+          
           <input id="wage" type="text" value={inputValue} onKeyDown={handleKeyDown} onChange={(e)=>setInputValue(e.target.value)} placeholder="Search anything" className="input"/>
           <Link className="sk" onClick={fetchData} to={inputValue.length > 0? "/result" : null}>
-            <img id="search" alt="this is an image" className="homeSearch" src="src/Images/search.png" />
+            <img id="search" alt="image" className="homeSearch" src="https://cdn-icons-png.flaticon.com/512/875/875623.png" />
           </Link>
         </div>
       </div>

@@ -31,17 +31,19 @@
 { 
   background: rgb(0,0,0,0.25);
   border-radius: 2.25rem;
+  width: 70vw;
+  max-width: 600px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: .5em;
+  padding: 0 10px;
+
 }
 .input
 {
   font-size: 18px;
-  width: 75vw;
-  max-width: 35vw;
-  padding: 12px 0px;
+  width: 88%;
+  padding: 12px 4px;
   border: none;
   outline: none; 
   border-radius: 2.25rem;
