@@ -2,11 +2,12 @@ import "../Style/Results.css";
 import { useState } from "react";
 import Loading from "./Loading.jsx";
 
-const Results = (mainData) => {
-  console.log(mainData)
-  let { loading } = mainData.data.loading;
-  let { data } = mainData.data;
-//console.log(data)
+const Results = ({mainData,updateData}) => {
+  console.log(mainData);
+//const [ans, setAns]=useState(false)
+  let { loading } = mainData;
+  let { data } = mainData;
+  
   return (<> {loading ? (<Loading />) :
     (<div className="resultContainer">
       {data.search_information &&
@@ -23,17 +24,13 @@ const Results = (mainData) => {
               
               return (
                 <div key={key} className="relatedQuery quesAns">
-                  <div className="question">{elemQuery.question}</div>
-                  <div>{elemQuery.answer}</div>
+                  <div className="question" onClick={()=>{}}>{elemQuery.question}</div>
+                  <div style={{display: "none"}}>{elemQuery.answer}</div>
                 </div>
               )
             })}
           </div>
         </div>}
-
-
-
-
 
 
       {data.organic_results &&
@@ -58,9 +55,8 @@ const Results = (mainData) => {
         <div className="relatedSearches">
           <h4>Related searches</h4>
           <div className="queryContainer">
-            {data.related_searches.map((elemQuery, keyThree) => (
-              <div className="relatedQuery" key={keyThree}>{elemQuery.query.charAt(0).toUpperCase() + elemQuery.query.slice(1)}</div>
-            ))}
+            {data.related_searches.map((elemQuery, keyThree) => 
+          (<div className="relatedQuery" key={keyThree}>{elemQuery.query.charAt(0).toUpperCase() + elemQuery.query.slice(1)}</div>))}
           </div>
         </div>
       }

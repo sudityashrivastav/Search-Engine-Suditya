@@ -19,7 +19,7 @@ document.getElementById("search").click();
     else{
     let data = {};
     onData({"loading": true, data,inputValue});
-    const res = await fetch(`https://api.scaleserp.com/search?api_key=83E0A560F7E7495BAB2F6538E9110DD4&q=${inputValue.replace(" ","+")}&hl=en`);
+    const res = await fetch(`https://api.scaleserp.com/search?api_key=7D9298602AD642588D04BD85CE090FC7&q=${inputValue.replace(" ","+")}&hl=en`);
 data = await res.json();
     onData({loading: false, data,inputValue});
     }}
